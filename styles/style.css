@@ -1,5 +1,96 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--page__bg-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000b2e;
+  font-family: "IBM Plex mono", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: var(--page__gap, 40px);
+  display: flex;
+  flex-direction: column;
+}
+
+/*                                             */
+
+.header {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: inherit;
+}
+
+.header__theme-menu {
+  justify-self: right;
+}
+
+.header__title {
+  font-size: var(--header__text-size);
+  color: var(--title_text-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+  line-height: 83%;
+}
+
+.header__title-text {
+  color: var(--p__text-color);
+  font-weight: bold;
+  align-self: flex-start;
+  justify-self: center;
+  font-size: 18px;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/*                                     */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content__gap, 50px);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section__gap, 20px);
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.title-decor {
+  background-color: var(--p__bg-color);
+}
+
+.section__title {
+  color: var(--p__bg-color);
+  font-size: inherit;
+}
+
+.section__li-title {
+  color: var(--p__text-color);
+  font-size: inherit;
+}
+
+.section__ul-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-text__gap, 20px);
+}
+
+.section__li-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section__title-text__gap, 10px);
+}
+
+.section__p-text {
+  color: var(--p-section__text-color);
 }
