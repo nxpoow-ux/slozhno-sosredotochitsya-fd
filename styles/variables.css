@@ -3,16 +3,24 @@
   и их переопределение под различные устройства
 */
 :root {
+  --accent-color: rgba(255, 0, 112, 1);
+  --p__bg-color: var(--accent-color);
   --page__bg-image: url("../images/cover-image-dark.png");
   --title_text-color: rgba(219, 0, 255, 1);
-  --p__bg-color: rgba(255, 0, 112, 1);
   --p__text-color: rgba(0, 0, 40, 1);
   --header__text-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --p-section__text-color: rgba(241, 178, 206, 1);
+
+  --menu-button-color: #ff0070;
+  --menu-button-hover-color: rgb(255 0 112 / 40%);
 
   --page__gap: 40px;
   --content__gap: 50px;
   --section__gap: 20px;
   --section-text__gap: 20px;
   --section__title-text__gap: 10px;
+
+  --page__bg-color: #000028;
+  --decor-color: #ff0070;
+  --section-title-color: #ff0070;
 }
