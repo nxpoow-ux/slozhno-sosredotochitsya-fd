@@ -8,8 +8,8 @@
   background-attachment: fixed;
   background-color: var(--page__bg-color);
   font-family: "IBM Plex mono", sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
   gap: var(--page__gap, 40px);
   display: flex;
   flex-direction: column;
