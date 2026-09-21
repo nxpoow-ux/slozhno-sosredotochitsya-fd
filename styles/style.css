@@ -1,14 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: var(--page__bg-image);
+  background-image: var(--page-background-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--page__bg-color);
+  background-color: var(--page-background-color);
   font-family: "IBM Plex mono", sans-serif;
-  gap: var(--page__gap, 40px);
+  gap: var(--page-gap, 40px);
   display: flex;
   flex-direction: column;
 }
@@ -66,8 +66,8 @@
 }
 
 .header__title {
-  font-size: var(--header__text-size);
-  color: var(--title_text-color);
+  font-size: var(--title-size);
+  color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-weight: bold;
   align-self: start;
@@ -76,7 +76,7 @@
 }
 
 .header__title-text {
-  color: var(--p__text-color);
+  color: var(--title-decor-text-color);
   font-weight: bold;
   align-self: center;
   justify-self: end;
@@ -140,21 +140,21 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--content__gap, 50px);
+  gap: var(--content-gap, 50px);
   padding-inline: 10px;
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: var(--section__gap, 20px);
+  gap: var(--section-gap, 20px);
   font-family: inherit;
   font-size: 18px;
   line-height: 23.4px;
 }
 
 .title-decor {
-  background-color: var(--p__bg-color);
+  background-color: var(--title-decor-background-color);
 }
 
 .section__title {
@@ -163,35 +163,35 @@
 }
 
 .section__li-title {
-  color: var(--p__text-color);
+  color: var(--title-decor-text-color);
   font-size: inherit;
 }
 
 .section__ul-list {
   display: flex;
   flex-direction: column;
-  gap: var(--section-text__gap, 20px);
+  gap: var(--card-list-gap, 20px);
 }
 
 .section__li-item {
   display: flex;
   flex-direction: column;
-  gap: var(--section__title-text__gap, 10px);
+  gap: var(--card-content-gap, 10px);
 }
 
 .section__p-text {
-  color: var(--p-section__text-color);
+  color: var(--content-text-color);
 }
 
 .section__tips {
   display: flex;
   flex-direction: column;
-  gap: var(--section-text__gap);
+  gap: var(--card-list-gap);
 }
 
 .section__tips-title {
   margin: 0;
-  color: var(--p__text-color);
+  color: var(--title-decor-text-color);
   font-size: inherit;
   font-weight: 400;
 }
@@ -216,19 +216,19 @@
 /*                               */
 
 .gallery {
-  gap: var(--section__title-text__gap);
+  gap: var(--card-content-gap);
 }
 
 .gallery__title {
   margin: 0;
-  color: var(--p__text-color);
+  color: var(--title-decor-text-color);
   font-size: inherit;
 }
 
 .gallery__images {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--section__title-text__gap);
+  gap: var(--card-content-gap);
 }
 
 .gallery__image {
@@ -251,8 +251,8 @@
 
 .footer__title {
   margin: 0;
-  color: var(--title_text-color);
-  font-size: var(--header__text-size);
+  color: var(--title-color);
+  font-size: var(--title-size);
   font-weight: bold;
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -260,15 +260,19 @@
 
 @media (width >= 768px) {
   :root {
-    --header__text-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --page__gap: 60px;
-    --content__gap: 80px;
+    --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --page-gap: 60px;
+    --content-gap: 80px;
   }
 
   .header,
   .content,
   .footer {
     padding-inline: 20px;
+  }
+
+  .header {
+    padding-block: 20px;
   }
 
   .header,
@@ -302,7 +306,7 @@
   .section:not(.gallery) {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: var(--section__gap);
+    gap: var(--section-gap);
   }
 
   .section:not(.gallery) > .section__ul-list,
@@ -315,12 +319,12 @@
   }
 
   .gallery {
-    gap: var(--section__gap);
+    gap: var(--section-gap);
   }
 
   .gallery__images {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--section__gap);
+    gap: var(--section-gap);
   }
 
   .gallery__image:first-child {
@@ -365,6 +369,6 @@
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--section__gap);
+    gap: var(--section-gap);
   }
 }
